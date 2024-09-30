@@ -7,22 +7,22 @@ public class ArrayMethods{
     }
     public static String aryToString(int[] nums){
         String result = "{";
-        for(int i = 0; i < nums.length - 1; i++){
-            result += nums + ", ";
+        for (int i = 0; i < nums.length - 1; i++) {
+            result += nums[i] + ", ";
         }
-        result = nums[-1] + "}";
-        return(result);
+        result += nums[nums.length - 1] + "}"; 
+        return result;
     }
     public static int[] returnCopy(int[]ary){
-        int[] result = new int[ary.length];
-        for(int i = 0; i < ary.length; i++){
-            result += ary[i];
+         int[] result = new int[ary.length];
+        for (int i = 0; i < ary.length; i++) {
+            result[i] = ary[i]; 
         }
-        return(result);
+        return result;
     }
-    public static int[] tester(int[]a, int[]b){
+    public static int[] tester(int[]a, int[]b){  
         boolean test1 = true;
-        boolean test2 = fase;
+        boolean test2 = false;
         for(int i = 0; i < a.length; i++){
             if(a[i] != b[i]){
                 test1 = false;
@@ -32,6 +32,7 @@ public class ArrayMethods{
         if(a[0] == b[0]){
             test2 = true;
         }
-        return(test1 && test2);
+        boolean result = test1 && test2;
+        return(result);
     }
 }
