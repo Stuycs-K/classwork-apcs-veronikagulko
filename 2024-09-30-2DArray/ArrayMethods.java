@@ -12,24 +12,31 @@ public class ArrayMethods{
     System.out.println("Transpose test " + aryToString(swapRC(twodArray)));
   }
 
-  public static String aryToString(int[] nums){
+  public static String aryToString(int[] nums) {
+    if (nums.length == 0) {
+        return "{}";
+    }
     String result = "{";
     for (int i = 0; i < nums.length - 1; i++) {
         result += nums[i] + ", ";
     }
     result += nums[nums.length - 1] + "}";
     return result;
-    }
+}
     //using helper func
-  public static String aryToString(int[][] nums){
-    String result = "{";
-    for(int i = 0; i < nums.length; i++){
-      result += aryToString(nums[i]) + ", ";
+
+public static String aryToString(int[][] nums) {
+    if (nums.length == 0) {
+        return "{}";  // Handle empty 2D array
     }
-    result = result.substring(0,-2);
+    String result = "{";
+    for (int i = 0; i < nums.length; i++) {
+        result += aryToString(nums[i]) + ", ";
+    }
+    result = result.substring(0, result.length() - 2);
     result += "}";
-    return(result);
-  }
+    return result;
+}
  
 public static int arr2DSum(int[][]nums) {
   int sum = 0;
@@ -43,8 +50,8 @@ public static int arr2DSum(int[][]nums) {
 
 public static int[][] swapRC(int[][] nums){
         int[][] result = new int[nums[0].length][nums.length];
-        if (nums[0].length == 0) {
-            return nums;
+        if (nums.length == 0 || nums[0].length == 0) {
+        return new int[0][0]; 
         }
         for (int i = 0; i < nums.length; i++) {
             for (int j = 0; j  < nums[0].length; j++) {
