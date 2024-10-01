@@ -24,10 +24,9 @@ public class ArrayMethods{
     return result;
 }
     //using helper func
-
 public static String aryToString(int[][] nums) {
     if (nums.length == 0) {
-        return "{}";  // Handle empty 2D array
+        return "{}"; 
     }
     String result = "{";
     for (int i = 0; i < nums.length; i++) {
@@ -37,8 +36,7 @@ public static String aryToString(int[][] nums) {
     result += "}";
     return result;
 }
- 
-public static int arr2DSum(int[][]nums) {
+ public static int arr2DSum(int[][]nums) {
   int sum = 0;
   for(int i = 0; i < nums.length; i++){
     for(int j = 0; j < nums[i].length; j++){
@@ -47,7 +45,6 @@ public static int arr2DSum(int[][]nums) {
   }
   return(sum);
 }
-
 public static int[][] swapRC(int[][] nums){
         int[][] result = new int[nums[0].length][nums.length];
         if (nums.length == 0 || nums[0].length == 0) {
