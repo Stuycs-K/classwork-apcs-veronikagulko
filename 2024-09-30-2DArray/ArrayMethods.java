@@ -10,6 +10,9 @@ public class ArrayMethods{
     System.out.println("Sum of all elements in 2D array test 1: " + (arr2DSum(twodArray)));
     System.out.println("Sum of all elements in 2D array test 2: " + (arr2DSum(twodArray2)));
     System.out.println("Transpose test " + aryToString(swapRC(twodArray)));
+
+    int[][] nonNegativeArray1 =  replaceNegative(twoArray);
+    System.out.println(aryToString(nonNegativeArray1)
   }
 
   public static String aryToString(int[] nums) {
@@ -26,7 +29,7 @@ public class ArrayMethods{
     //using helper func
 public static String aryToString(int[][] nums) {
     if (nums.length == 0) {
-        return "{}"; 
+        return "{}";
     }
     String result = "{";
     for (int i = 0; i < nums.length; i++) {
@@ -34,7 +37,7 @@ public static String aryToString(int[][] nums) {
     }
     result = result.substring(0, result.length() - 2);
     result += "}";
-    return result;
+    return result;//-All other negatives replace with 0
 }
  public static int arr2DSum(int[][]nums) {
   int sum = 0;
@@ -48,14 +51,28 @@ public static String aryToString(int[][] nums) {
 public static int[][] swapRC(int[][] nums){
         int[][] result = new int[nums[0].length][nums.length];
         if (nums.length == 0 || nums[0].length == 0) {
-        return new int[0][0]; 
+        return new int[0][0];
         }
         for (int i = 0; i < nums.length; i++) {
             for (int j = 0; j  < nums[0].length; j++) {
                 result[j][i] = nums[i][j];
             }
-        }
+        }//-All other negatives replace with 0
         return result;
-    } 
+    }
+public static void replaceNegative(int[][] vals){
+  for(int i = 0; i < int.length; i++){
+    for(int j = 0; j < int[].length; j++){
+      if(int[i][j] < 0){
+        if(i == j){
+          vals[i][j] = 1;
+        }
+        else{
+        vals[i][j] = 0;
+      }
+    }
+  }
+}
 }
 
+}
