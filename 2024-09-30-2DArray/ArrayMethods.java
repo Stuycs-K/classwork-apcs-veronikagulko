@@ -1,10 +1,15 @@
 //Hangqi, hangqih@nycstudents.net; Veronika, vgulko60@stuy.edu
 public class ArrayMethods{
   public static void main(String[] args){
-    int[] 1dArray = new int[] {1, 2, 3, 4, 5};
-    System.out.println(aryToString(1dArray));
-    int[][] 2dArray = new int[][] {{1,2,3}, {4,5,6}, {7,8,9}};
-    System.out.println(aryToString(2dArray));
+    int[] 1dArray = new int[]{1, 2, 3, 4, 5};
+    System.out.println("1DArray to String test: " + aryToString(1dArray));
+    int[][] 2dArray = new int[][]{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    System.out.println("2DArray to String test 1: " + aryToString(2dArray));
+    int[][] 2dArray2 = new int[][]{{1, 2, 3}, {4, 6}, {7, 8}};
+    System.out.println("2DArray to String test 2: " + aryToString(aryToString(2dArray2)));
+    System.out.println("Sum of all elements in 2D array test 1: " + aryToString(arr2DSum(2dArray)));
+    System.out.println("Sum of all elements in 2D array test 2: " + aryToString(arr2DSum(2dArray2)));
+    System.out.println("Transpose test " + aryToString(swapRC(2dArray)));
   }
 
   public static String aryToString(int[] nums){
