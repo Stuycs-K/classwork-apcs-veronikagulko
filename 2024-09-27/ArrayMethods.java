@@ -3,7 +3,11 @@ public class ArrayMethods{
         int[] test1 = {1, 2, 3, 4, 5, 6};
         int[] test2 = returnCopy(test1);
         boolean test3 = tester(test1, test2);
-        result(test3);
+        if test3 {
+            System.out.println("Test passed");
+        } else {
+            System.out.println("Test failed");
+        }
     }
     public static String aryToString(int[] nums){
         String result = "{";
@@ -32,7 +36,7 @@ public class ArrayMethods{
         if(a[0] == b[0]){
             test2 = true;
         }
-        boolean result = test1 && test2;
-        return(result);
+        boolean result = test1 && test2; 
+        return result;
     }
 }
