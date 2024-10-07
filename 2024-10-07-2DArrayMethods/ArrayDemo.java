@@ -1,13 +1,30 @@
 import java.util.Arrays;
 public static ArrayDemo{
-  public static voic main(String[]args){
+  public static void main(String[]args){
     //tests
   }
   public static String arrToString(int[] ary){
-    // array to string one d array
+    if (nums.length == 0) {
+        return "{}";
+    }
+    String result = "{";
+    for (int i = 0; i < nums.length - 1; i++) {
+        result += nums[i] + ", ";
+    }
+    result += nums[nums.length - 1] + "}";
+    return result;
   }
   public static String arrToString(int[][] ary){
-    // array to string two d array
+    if (nums.length == 0) {
+        return "{}";
+    }
+    String result = "{";
+    for (int i = 0; i < nums.length; i++) {
+        result += aryToString(nums[i]) + ", ";
+    }
+    result = result.substring(0, result.length() - 2);
+    result += "}";
+    return result;
   }
   public static int countZeroes2D(int[][] nums){
     // count how many zeroes are in array
