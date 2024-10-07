@@ -10,9 +10,9 @@ public class ArrayMethods{
     System.out.println("Sum of all elements in 2D array test 1: " + (arr2DSum(twodArray)));
     System.out.println("Sum of all elements in 2D array test 2: " + (arr2DSum(twodArray2)));
     System.out.println("Transpose test " + aryToString(swapRC(twodArray)));
-
     int[][] nonNegativeArray1 =  replaceNegative(twoArray);
-    System.out.println(aryToString(nonNegativeArray1)
+    System.out.println(aryToString(nonNegativeArray1);
+    System.out.println(aryToString(copy(twodArray)));
   }
 
   public static String aryToString(int[] nums) {
