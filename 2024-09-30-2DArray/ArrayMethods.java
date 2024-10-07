@@ -74,5 +74,18 @@ public static void replaceNegative(int[][] vals){
   }
 }
 }
-
+public static int[] copy(int[] nums){
+  int[] result = new int[nums.length];
+  for(int i = 0; i < nums.length; i++){
+    result[i] = nums[i];
+  }
+  return(result);
+}
+  public static int[][] copy(int[][] nums){
+    int[][] Result = new int[nums.length][nums[].length];
+    for(int i = 0; i < nums.length; i++){
+      Result[i] = copy(nums[i]); 
+    }
+    return(Result);
+  }
 }
