@@ -77,22 +77,25 @@ public class ArrayDemo {
     }
     return result;
   }
-  public static String tdTags(int[] nums){
+  public static String tdTags(int[] nums) {
     String result = "<tr><td>";
-    for(int i = 0; i < nums.length - 1; i++){
-      result += nums[i] + "</td><td>"; 
+    for (int i = 0; i < nums.length - 1; i++) {
+        result += nums[i] + "</td><td>"; 
     }
-    result += nums[-1] + "</td></tr>";
-    return(result);
-  }
-  public static String htmlTable(int[][] nums){
-    // place tr tags around each row, place td tags aound each value (make helper func)
-    // place table tag around entirety
-    String result = "<table";
-    for (int i = 0; i < nums.length; i++){
-      result += tdTags(nums[i]);
+    result += nums[nums.length - 1] + "</td></tr>"; 
+    return result;
+}
+
+public static String htmlTable(int[][] nums) {
+    // Place tr tags around each row, place td tags around each value (use helper func)
+    // Place table tag around the entirety
+    String result = "<table>";  
+    for (int i = 0; i < nums.length; i++) {
+        result += tdTags(nums[i]); 
     }
-    result += "</table>";
-    return(result); 
+    result += "</table>"; 
+    return result;
+}
+
   }
 }
