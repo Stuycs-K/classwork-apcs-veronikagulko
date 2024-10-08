@@ -28,15 +28,39 @@ public class ArrayDemo {
     return result;
   }
   public static int countZeroes2D(int[][] nums){
-    // count how many zeroes are in array
-    return 0;
+    int count = 0;
+    for(int i = 0; i < nums.length; i++){
+      for(int j = 0; j < nums[i].length; i++){
+        if(nums[i][j] == 0){
+          count++;
+        }
+      }
+    }
+    return(count);
   }
   public static int arr2DSum(int[][] nums){
     // calculate sum, use nested loop
-    return 0;
+    int sum = 0;
+    for(int i = 0; i < nums.length; i++){
+      for(int j = 0; j < nums[i].length; j++){
+        sum += nums[i][j];
+      }
+    }
+    return(sum);
   }
   public static void replaceNegative(int[][] vals){
-    // same as hw
+    for(int i = 0; i < vals.length; i++){
+      for(int j = 0; j < vals[i].length; j++){
+        if(vals[i][j] < 0){
+          if(i == j){
+          vals[i][j] = 1;
+          }
+        else{
+        vals[i][j] = 0;
+          }
+        }
+      }
+    }
   }
   public static int[][] swapRC(int[][] nums){
     int[][] result = new int[nums[0].length][nums.length];
