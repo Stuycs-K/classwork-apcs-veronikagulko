@@ -1,6 +1,7 @@
 public class ArrayDemo {
   public static void main(String[]args){
-    System.out.println("HI");
+    int[][] nums1 = {{1, 2}, {3, 4}};
+    System.out.println(arrToString(htmlTable(nums1)));
   }
 // array to string 1d array
   public static String arrToString(int[] ary){
