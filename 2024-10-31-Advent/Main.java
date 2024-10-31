@@ -6,5 +6,6 @@ class Main {
         while(sci.hasNext()){
             System.out.println(sci.next());
         }
+        Scanner sc1 = new Scanner("10.0 1.04 99.0 -3.0 4.2");
     }
 }
