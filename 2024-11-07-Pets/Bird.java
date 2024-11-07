@@ -10,7 +10,17 @@ public class Bird extends Animal {
     super(noise, age, name);
   }
 
-
+  public void speak(){
+    super.speak();
+    System.out.println("My feathers are colored" + getColor());
+    System.out.println("I am " + getHeight() + " inches tall")
+  }
+  public double getHeight(){
+    return height;
+  }
+  public String getColor(){
+    return color;
+  }
   //6.Override the speak() method.
   /*WITHOUT REPEATING CODE:
   print the following message replacing the ? with name/age/noise/color/height:
