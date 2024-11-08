@@ -5,15 +5,15 @@ public class Bird extends Animal {
 
   //4.
   public Bird(String noise, int age, String name, double height, String color){
+    super(noise, age, name);
     this.height = height;
     this.color = color;
-    super(noise, age, name);
   }
 
   public void speak(){
     super.speak();
-    System.out.println("My feathers are colored" + getColor());
-    System.out.println("I am " + getHeight() + " inches tall")
+    System.out.println("My feathers are colored " + getColor());
+    System.out.println("I am " + Double.toString(getHeight()) + " inches tall");
   }
   public double getHeight(){
     return height;
@@ -21,19 +21,6 @@ public class Bird extends Animal {
   public String getColor(){
     return color;
   }
-  //6.Override the speak() method.
-  /*WITHOUT REPEATING CODE:
-  print the following message replacing the ? with name/age/noise/color/height:
-    My name is ?.
-    I am ? years old.
-    I say ?.
-    My feathers are colored ?
-    I am ? inches tall
-  */
-  //You can call the old method using super.speak();
-  //public void speak(){}
-
-
 
   //7:Override the getName() method so that a bid's name is "The Mighty NAME" instead of "NAME"
   //e.g. "The Mighty Polly" instead of just "Polly"
